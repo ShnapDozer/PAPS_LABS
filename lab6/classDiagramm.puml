@@ -1,0 +1,32 @@
+@startuml
+
+class Observer {
+    +update(): void
+}
+
+class Subject {
+    +attach(observer: Observer): void
+    +detach(observer: Observer): void
+    +notify(): void
+}
+
+class Config {
+    -filename: string
+    -observers: vector<Observer*>
+    -lastConfig: string
+    +checkChanges(): void
+    +readConfig(): string
+    +attach(observer: Observer): void
+    +detach(observer: Observer): void
+    +notify(): void
+}
+
+Config -> Subject
+Config -> Observer
+Game -> Observer
+
+class Game {
+    +update(): void
+}
+
+@enduml

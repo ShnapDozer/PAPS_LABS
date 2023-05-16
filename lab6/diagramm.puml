@@ -1,0 +1,10 @@
+@startuml
+
+actor User
+
+User -> Config: checkChanges()
+Config -> Config: readConfig()
+Config -> Config: notify()
+Config -> Game: update()
+
+@enduml
