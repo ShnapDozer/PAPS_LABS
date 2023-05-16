@@ -1,0 +1,56 @@
+@startuml
+
+class Expression {
+  +interpret() : std::string
+}
+
+class SpaceExpression {
+  -input_ : std::string
+  +interpret() : std::string
+}
+
+class DashExpression {
+  -input_ : std::string
+  +interpret() : std::string
+}
+
+class QuoteExpression {
+  -input_ : std::string
+  +interpret() : std::string
+}
+
+class TabExpression {
+  -input_ : std::string
+  +interpret() : std::string
+}
+
+class ParenthesisExpression {
+  -input_ : std::string
+  +interpret() : std::string
+}
+
+class NewlineExpression {
+  -input_ : std::string
+  +interpret() : std::string
+}
+
+class FullGrammarExpression {
+  -input_ : std::string
+  +interpret() : std::string
+}
+
+
+Expression <|-- SpaceExpression
+Expression <|-- DashExpression
+Expression <|-- QuoteExpression
+Expression <|-- TabExpression
+Expression <|-- ParenthesisExpression
+Expression <|-- NewlineExpression
+Expression <|-- FullGrammarExpression
+
+FullGrammarExpression *-- SpaceExpression
+FullGrammarExpression *-- DashExpression
+FullGrammarExpression *-- QuoteExpression
+FullGrammarExpression *-- TabExpression
+FullGrammarExpression *-- ParenthesisExpression
+FullGrammarExpression *-- NewlineExpression
