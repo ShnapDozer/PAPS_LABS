@@ -118,7 +118,7 @@ private:
 };
 
 int main() {
-    std::string input = "   This is    a     test    \n\n\nwith   multiple - errors. v( \"test\" )   \n";
+    std::string input = "   This is    a     test    \n\n\nwith   multiple - errors . v( \"test\" )   \n";
 
     Expression* expression = new FullGrammarExpression(input);
     std::cout << expression->interpret() << std::endl;

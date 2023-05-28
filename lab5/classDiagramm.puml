@@ -48,6 +48,12 @@ Expression <|-- ParenthesisExpression
 Expression <|-- NewlineExpression
 Expression <|-- FullGrammarExpression
 
+class Client
+class Context
+
+Client <|-- Expression
+Context <|-- Client
+
 FullGrammarExpression *-- SpaceExpression
 FullGrammarExpression *-- DashExpression
 FullGrammarExpression *-- QuoteExpression

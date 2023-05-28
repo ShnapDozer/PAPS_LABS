@@ -21,9 +21,13 @@ class Config {
     +notify(): void
 }
 
-Config -> Subject
-Config -> Observer
-Game -> Observer
+Subject <|-- Config
+Observer  <|-- Game
+
+Config *-- Game
+Subject *-- Observer
+
+
 
 class Game {
     +update(): void
